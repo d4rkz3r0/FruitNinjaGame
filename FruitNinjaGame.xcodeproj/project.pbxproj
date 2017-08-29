@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE66824D1F54E94E0035C6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE66824C1F54E94E0035C6C9 /* AppDelegate.swift */; };
+		BE66824F1F54E94E0035C6C9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE66824E1F54E94E0035C6C9 /* GameScene.sks */; };
+		BE6682531F54E94E0035C6C9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6682521F54E94E0035C6C9 /* GameScene.swift */; };
+		BE6682551F54E94E0035C6C9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6682541F54E94E0035C6C9 /* GameViewController.swift */; };
+		BE6682581F54E94E0035C6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6682561F54E94E0035C6C9 /* Main.storyboard */; };
+		BE66825A1F54E94E0035C6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6682591F54E94E0035C6C9 /* Assets.xcassets */; };
+		BE66825D1F54E94E0035C6C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE66825B1F54E94E0035C6C9 /* LaunchScreen.storyboard */; };
+		BE66827B1F54EF970035C6C9 /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE6682651F54EF970035C6C9 /* explosion.caf */; };
+		BE66827C1F54EF970035C6C9 /* launch.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE6682661F54EF970035C6C9 /* launch.caf */; };
+		BE66827D1F54EF970035C6C9 /* sliceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682671F54EF970035C6C9 /* sliceBackground.png */; };
+		BE66827E1F54EF970035C6C9 /* sliceBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682681F54EF970035C6C9 /* sliceBackground@2x.png */; };
+		BE66827F1F54EF970035C6C9 /* sliceBomb.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682691F54EF970035C6C9 /* sliceBomb.png */; };
+		BE6682801F54EF970035C6C9 /* sliceBomb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE66826A1F54EF970035C6C9 /* sliceBomb@2x.png */; };
+		BE6682811F54EF970035C6C9 /* sliceBombFuse.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE66826B1F54EF970035C6C9 /* sliceBombFuse.caf */; };
+		BE6682821F54EF970035C6C9 /* sliceFuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE66826C1F54EF970035C6C9 /* sliceFuse.sks */; };
+		BE6682831F54EF970035C6C9 /* sliceHitBomb.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE66826D1F54EF970035C6C9 /* sliceHitBomb.sks */; };
+		BE6682841F54EF970035C6C9 /* sliceHitEnemy.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE66826E1F54EF970035C6C9 /* sliceHitEnemy.sks */; };
+		BE6682851F54EF970035C6C9 /* sliceLife.png in Resources */ = {isa = PBXBuildFile; fileRef = BE66826F1F54EF970035C6C9 /* sliceLife.png */; };
+		BE6682861F54EF970035C6C9 /* sliceLife@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682701F54EF970035C6C9 /* sliceLife@2x.png */; };
+		BE6682871F54EF970035C6C9 /* sliceLifeGone.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682711F54EF970035C6C9 /* sliceLifeGone.png */; };
+		BE6682881F54EF970035C6C9 /* sliceLifeGone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682721F54EF970035C6C9 /* sliceLifeGone@2x.png */; };
+		BE6682891F54EF970035C6C9 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682731F54EF970035C6C9 /* spark.png */; };
+		BE66828A1F54EF970035C6C9 /* swoosh1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE6682741F54EF970035C6C9 /* swoosh1.caf */; };
+		BE66828B1F54EF970035C6C9 /* swoosh2.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE6682751F54EF970035C6C9 /* swoosh2.caf */; };
+		BE66828C1F54EF970035C6C9 /* swoosh3.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE6682761F54EF970035C6C9 /* swoosh3.caf */; };
+		BE66828D1F54EF970035C6C9 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682771F54EF970035C6C9 /* watermelon.png */; };
+		BE66828E1F54EF970035C6C9 /* watermelon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6682781F54EF970035C6C9 /* watermelon@2x.png */; };
+		BE66828F1F54EF970035C6C9 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE6682791F54EF970035C6C9 /* whack.caf */; };
+		BE6682901F54EF970035C6C9 /* wrong.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE66827A1F54EF970035C6C9 /* wrong.caf */; };
+		BE6682951F54EFD30035C6C9 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6682941F54EFD30035C6C9 /* Helper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE6682491F54E94E0035C6C9 /* FruitNinjaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitNinjaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE66824C1F54E94E0035C6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE66824E1F54E94E0035C6C9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		BE6682521F54E94E0035C6C9 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BE6682541F54E94E0035C6C9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BE6682571F54E94E0035C6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE6682591F54E94E0035C6C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE66825C1F54E94E0035C6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE66825E1F54E94E0035C6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE6682651F54EF970035C6C9 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
+		BE6682661F54EF970035C6C9 /* launch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = launch.caf; sourceTree = "<group>"; };
+		BE6682671F54EF970035C6C9 /* sliceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliceBackground.png; sourceTree = "<group>"; };
+		BE6682681F54EF970035C6C9 /* sliceBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliceBackground@2x.png"; sourceTree = "<group>"; };
+		BE6682691F54EF970035C6C9 /* sliceBomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliceBomb.png; sourceTree = "<group>"; };
+		BE66826A1F54EF970035C6C9 /* sliceBomb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliceBomb@2x.png"; sourceTree = "<group>"; };
+		BE66826B1F54EF970035C6C9 /* sliceBombFuse.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sliceBombFuse.caf; sourceTree = "<group>"; };
+		BE66826C1F54EF970035C6C9 /* sliceFuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceFuse.sks; sourceTree = "<group>"; };
+		BE66826D1F54EF970035C6C9 /* sliceHitBomb.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceHitBomb.sks; sourceTree = "<group>"; };
+		BE66826E1F54EF970035C6C9 /* sliceHitEnemy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceHitEnemy.sks; sourceTree = "<group>"; };
+		BE66826F1F54EF970035C6C9 /* sliceLife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliceLife.png; sourceTree = "<group>"; };
+		BE6682701F54EF970035C6C9 /* sliceLife@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliceLife@2x.png"; sourceTree = "<group>"; };
+		BE6682711F54EF970035C6C9 /* sliceLifeGone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliceLifeGone.png; sourceTree = "<group>"; };
+		BE6682721F54EF970035C6C9 /* sliceLifeGone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliceLifeGone@2x.png"; sourceTree = "<group>"; };
+		BE6682731F54EF970035C6C9 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		BE6682741F54EF970035C6C9 /* swoosh1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh1.caf; sourceTree = "<group>"; };
+		BE6682751F54EF970035C6C9 /* swoosh2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh2.caf; sourceTree = "<group>"; };
+		BE6682761F54EF970035C6C9 /* swoosh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh3.caf; sourceTree = "<group>"; };
+		BE6682771F54EF970035C6C9 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
+		BE6682781F54EF970035C6C9 /* watermelon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "watermelon@2x.png"; sourceTree = "<group>"; };
+		BE6682791F54EF970035C6C9 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
+		BE66827A1F54EF970035C6C9 /* wrong.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.caf; sourceTree = "<group>"; };
+		BE6682941F54EFD30035C6C9 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE6682461F54E94E0035C6C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE6682401F54E94E0035C6C9 = {
+			isa = PBXGroup;
+			children = (
+				BE66824B1F54E94E0035C6C9 /* FruitNinjaGame */,
+				BE66824A1F54E94E0035C6C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE66824A1F54E94E0035C6C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE6682491F54E94E0035C6C9 /* FruitNinjaGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE66824B1F54E94E0035C6C9 /* FruitNinjaGame */ = {
+			isa = PBXGroup;
+			children = (
+				BE6682641F54EF970035C6C9 /* Content */,
+				BE6682911F54EFA30035C6C9 /* App */,
+				BE6682921F54EFBA0035C6C9 /* Game */,
+				BE6682931F54EFCD0035C6C9 /* Utils */,
+				BE6682591F54E94E0035C6C9 /* Assets.xcassets */,
+			);
+			path = FruitNinjaGame;
+			sourceTree = "<group>";
+		};
+		BE6682641F54EF970035C6C9 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				BE6682651F54EF970035C6C9 /* explosion.caf */,
+				BE6682661F54EF970035C6C9 /* launch.caf */,
+				BE6682671F54EF970035C6C9 /* sliceBackground.png */,
+				BE6682681F54EF970035C6C9 /* sliceBackground@2x.png */,
+				BE6682691F54EF970035C6C9 /* sliceBomb.png */,
+				BE66826A1F54EF970035C6C9 /* sliceBomb@2x.png */,
+				BE66826B1F54EF970035C6C9 /* sliceBombFuse.caf */,
+				BE66826C1F54EF970035C6C9 /* sliceFuse.sks */,
+				BE66826D1F54EF970035C6C9 /* sliceHitBomb.sks */,
+				BE66826E1F54EF970035C6C9 /* sliceHitEnemy.sks */,
+				BE66826F1F54EF970035C6C9 /* sliceLife.png */,
+				BE6682701F54EF970035C6C9 /* sliceLife@2x.png */,
+				BE6682711F54EF970035C6C9 /* sliceLifeGone.png */,
+				BE6682721F54EF970035C6C9 /* sliceLifeGone@2x.png */,
+				BE6682731F54EF970035C6C9 /* spark.png */,
+				BE6682741F54EF970035C6C9 /* swoosh1.caf */,
+				BE6682751F54EF970035C6C9 /* swoosh2.caf */,
+				BE6682761F54EF970035C6C9 /* swoosh3.caf */,
+				BE6682771F54EF970035C6C9 /* watermelon.png */,
+				BE6682781F54EF970035C6C9 /* watermelon@2x.png */,
+				BE6682791F54EF970035C6C9 /* whack.caf */,
+				BE66827A1F54EF970035C6C9 /* wrong.caf */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		BE6682911F54EFA30035C6C9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BE66825E1F54E94E0035C6C9 /* Info.plist */,
+				BE66825B1F54E94E0035C6C9 /* LaunchScreen.storyboard */,
+				BE6682561F54E94E0035C6C9 /* Main.storyboard */,
+				BE66824C1F54E94E0035C6C9 /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		BE6682921F54EFBA0035C6C9 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				BE66824E1F54E94E0035C6C9 /* GameScene.sks */,
+				BE6682521F54E94E0035C6C9 /* GameScene.swift */,
+				BE6682541F54E94E0035C6C9 /* GameViewController.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		BE6682931F54EFCD0035C6C9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE6682941F54EFD30035C6C9 /* Helper.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE6682481F54E94E0035C6C9 /* FruitNinjaGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE6682611F54E94E0035C6C9 /* Build configuration list for PBXNativeTarget "FruitNinjaGame" */;
+			buildPhases = (
+				BE6682451F54E94E0035C6C9 /* Sources */,
+				BE6682461F54E94E0035C6C9 /* Frameworks */,
+				BE6682471F54E94E0035C6C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FruitNinjaGame;
+			productName = FruitNinjaGame;
+			productReference = BE6682491F54E94E0035C6C9 /* FruitNinjaGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE6682411F54E94E0035C6C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Steve Kerney";
+				TargetAttributes = {
+					BE6682481F54E94E0035C6C9 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = SKX4P6BP4Q;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BE6682441F54E94E0035C6C9 /* Build configuration list for PBXProject "FruitNinjaGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE6682401F54E94E0035C6C9;
+			productRefGroup = BE66824A1F54E94E0035C6C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE6682481F54E94E0035C6C9 /* FruitNinjaGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE6682471F54E94E0035C6C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6682581F54E94E0035C6C9 /* Main.storyboard in Resources */,
+				BE6682841F54EF970035C6C9 /* sliceHitEnemy.sks in Resources */,
+				BE66827C1F54EF970035C6C9 /* launch.caf in Resources */,
+				BE66824F1F54E94E0035C6C9 /* GameScene.sks in Resources */,
+				BE66827E1F54EF970035C6C9 /* sliceBackground@2x.png in Resources */,
+				BE6682851F54EF970035C6C9 /* sliceLife.png in Resources */,
+				BE66828F1F54EF970035C6C9 /* whack.caf in Resources */,
+				BE66828D1F54EF970035C6C9 /* watermelon.png in Resources */,
+				BE6682891F54EF970035C6C9 /* spark.png in Resources */,
+				BE66827F1F54EF970035C6C9 /* sliceBomb.png in Resources */,
+				BE6682871F54EF970035C6C9 /* sliceLifeGone.png in Resources */,
+				BE66827B1F54EF970035C6C9 /* explosion.caf in Resources */,
+				BE6682901F54EF970035C6C9 /* wrong.caf in Resources */,
+				BE6682831F54EF970035C6C9 /* sliceHitBomb.sks in Resources */,
+				BE66828E1F54EF970035C6C9 /* watermelon@2x.png in Resources */,
+				BE66828C1F54EF970035C6C9 /* swoosh3.caf in Resources */,
+				BE66828A1F54EF970035C6C9 /* swoosh1.caf in Resources */,
+				BE6682881F54EF970035C6C9 /* sliceLifeGone@2x.png in Resources */,
+				BE66825A1F54E94E0035C6C9 /* Assets.xcassets in Resources */,
+				BE66827D1F54EF970035C6C9 /* sliceBackground.png in Resources */,
+				BE66825D1F54E94E0035C6C9 /* LaunchScreen.storyboard in Resources */,
+				BE6682801F54EF970035C6C9 /* sliceBomb@2x.png in Resources */,
+				BE66828B1F54EF970035C6C9 /* swoosh2.caf in Resources */,
+				BE6682861F54EF970035C6C9 /* sliceLife@2x.png in Resources */,
+				BE6682811F54EF970035C6C9 /* sliceBombFuse.caf in Resources */,
+				BE6682821F54EF970035C6C9 /* sliceFuse.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE6682451F54E94E0035C6C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6682531F54E94E0035C6C9 /* GameScene.swift in Sources */,
+				BE6682551F54E94E0035C6C9 /* GameViewController.swift in Sources */,
+				BE66824D1F54E94E0035C6C9 /* AppDelegate.swift in Sources */,
+				BE6682951F54EFD30035C6C9 /* Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE6682561F54E94E0035C6C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE6682571F54E94E0035C6C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE66825B1F54E94E0035C6C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE66825C1F54E94E0035C6C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE66825F1F54E94E0035C6C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		BE6682601F54E94E0035C6C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE6682621F54E94E0035C6C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SKX4P6BP4Q;
+				INFOPLIST_FILE = FruitNinjaGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.d4rkz3r0.FruitNinjaGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BE6682631F54E94E0035C6C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SKX4P6BP4Q;
+				INFOPLIST_FILE = FruitNinjaGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.d4rkz3r0.FruitNinjaGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE6682441F54E94E0035C6C9 /* Build configuration list for PBXProject "FruitNinjaGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE66825F1F54E94E0035C6C9 /* Debug */,
+				BE6682601F54E94E0035C6C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE6682611F54E94E0035C6C9 /* Build configuration list for PBXNativeTarget "FruitNinjaGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE6682621F54E94E0035C6C9 /* Debug */,
+				BE6682631F54E94E0035C6C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE6682411F54E94E0035C6C9 /* Project object */;
+}
