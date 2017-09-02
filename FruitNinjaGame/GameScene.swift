@@ -62,6 +62,7 @@ class GameScene: SKScene
     }
     var livesImages = [SKSpriteNode]();
     var livesRemaining = 3;
+    var gameEnded = false;
     
     //Enemies
     var activeEnemies = [SKSpriteNode]();
@@ -97,11 +98,28 @@ class GameScene: SKScene
             {
                 if enemy.position.y < -140
                 {
-                    enemy.removeFromParent();
+                    enemy.removeAllActions();
                     
-                    if let index = activeEnemies.index(of: enemy)
+                    if enemy.name == "watermelon"
                     {
-                        activeEnemies.remove(at: index);
+                        enemy.name = "";
+                        enemy.removeFromParent();
+                        subtractLife();
+                        
+                        if let index = activeEnemies.index(of: enemy)
+                        {
+                            activeEnemies.remove(at: index);
+                        }
+                    }
+                    else if enemy.name == "bombContainer"
+                    {
+                        enemy.name = "";
+                        enemy.removeFromParent();
+                        
+                        if let index = activeEnemies.index(of: enemy)
+                        {
+                            activeEnemies.remove(at: index);
+                        }
                     }
                 }
             }
@@ -160,6 +178,8 @@ extension GameScene
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
     {
+        guard !gameEnded else { return; }
+        
         guard let vTouch = touches.first else { return; }
         let touchLocation = vTouch.location(in: self);
         activeSlicePoints.append(touchLocation);
@@ -168,6 +188,69 @@ extension GameScene
         redrawActiveSlice();
         
         if !isSwooshSFXPlaying { playSwooshSFX(); }
+        
+        let nodesAtPoint = nodes(at: touchLocation);
+        
+        for node in nodesAtPoint
+        {
+            if node.name == "watermelon"
+            {
+                //Particles
+                let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy")!
+                emitter.position = node.position;
+                addChild(emitter);
+                
+                //Prevent multiple swipes
+                node.name = "";
+                node.physicsBody!.isDynamic = false;
+                
+                //Death Animation
+                let scaleOutAction = SKAction.scale(by: 0.001, duration: 0.2);
+                let fadeOutAction = SKAction.fadeOut(withDuration: 0.2);
+                let actionGroup = [scaleOutAction, fadeOutAction];
+                let deathAction = SKAction.sequence(actionGroup);
+                node.run(deathAction);
+                
+                //Remove from Scene
+                let index = activeEnemies.index(of: node as! SKSpriteNode)!;
+                activeEnemies.remove(at: index);
+                
+                //Score
+                score += 1;
+                
+                //Death Sound
+                run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false));
+            }
+            else if node.name == "bomb"
+            {
+                //Particles
+                let emitter = SKEmitterNode(fileNamed: "sliceHitBomb")!
+                emitter.position = node.parent!.position;
+                addChild(emitter);
+                
+                //Prevent multiple swipes
+                node.name = "";
+                node.parent!.physicsBody!.isDynamic = false;
+                
+                //Death Animation
+                let scaleOutAction = SKAction.scale(by: 0.001, duration: 0.2);
+                let fadeOutAction = SKAction.fadeOut(withDuration: 0.2);
+                let actionGroup = [scaleOutAction, fadeOutAction];
+                let deathAction = SKAction.sequence(actionGroup);
+                node.parent!.run(deathAction);
+                
+                //Remove from Scene
+                let index = activeEnemies.index(of: node.parent as! SKSpriteNode)!;
+                activeEnemies.remove(at: index);
+                
+                //Death Sound
+                run(SKAction.playSoundFileNamed("explosion.caf", waitForCompletion: false));
+                
+                //EndGame
+                endGame(triggeredByBomb: true);
+            }
+        }
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>?, with event: UIEvent?)
@@ -274,6 +357,30 @@ extension GameScene
         //Assign path
         activeSliceBG.path = path.cgPath;
         activeSliceFG.path = path.cgPath;
+    }
+    
+    func subtractLife()
+    {
+        livesRemaining -= 1;
+        run(SKAction.playSoundFileNamed("wrong.caf", waitForCompletion: false));
+        
+        var life: SKSpriteNode;
+        
+        switch livesRemaining
+        {
+        case 2:
+            life = livesImages[0];
+        case 1:
+            life = livesImages[1];
+        default:
+            life = livesImages[2];
+            endGame(triggeredByBomb: false);
+        }
+        
+        life.texture = SKTexture(imageNamed: "sliceLifeGone");
+        life.xScale = 1.3;
+        life.yScale = 1.3;
+        life.run(SKAction.scale(by: 1.0, duration: 0.1));
     }
 }
 
@@ -389,6 +496,8 @@ extension GameScene
 {
     func tossEnemies()
     {
+        guard !gameEnded else { return; }
+        
         spawnTime *= 0.991;
         chainDelay *= 0.99
         physicsWorld.speed *= 1.02;
@@ -438,6 +547,36 @@ extension GameScene
         
         sequenceIndex += 1;
         nextSequencedQueued = false;
+    }
+    
+    func endGame(triggeredByBomb: Bool)
+    {
+        guard !gameEnded else { return; }
+        
+        gameEnded = true;
+        physicsWorld.speed = 0;
+        isUserInteractionEnabled = false;
+        
+        if bombSFX != nil
+        {
+            bombSFX.stop();
+            bombSFX = nil;
+        }
+        
+        if triggeredByBomb
+        {
+            livesImages[0].texture = SKTexture(imageNamed: "sliceLifeGone");
+            livesImages[1].texture = SKTexture(imageNamed: "sliceLifeGone");
+            livesImages[2].texture = SKTexture(imageNamed: "sliceLifeGone");
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            if let scene = SKScene(fileNamed: "GameOverScene")
+            {
+                scene.scaleMode = .aspectFill
+                self.view?.presentScene(scene);
+            }
+        });
     }
 }
 

@@ -37,6 +37,10 @@
 		BE66828F1F54EF970035C6C9 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE6682791F54EF970035C6C9 /* whack.caf */; };
 		BE6682901F54EF970035C6C9 /* wrong.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE66827A1F54EF970035C6C9 /* wrong.caf */; };
 		BE6682951F54EFD30035C6C9 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6682941F54EFD30035C6C9 /* Helper.swift */; };
+		BED43B861F5A1A670071692A /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BED43B851F5A1A670071692A /* GameOverScene.sks */; };
+		BED43B881F5A1B3E0071692A /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED43B871F5A1B3E0071692A /* GameOverScene.swift */; };
+		BED43B8C1F5A2A230071692A /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = BED43B8B1F5A2A230071692A /* gameover.caf */; };
+		BED43B8E1F5A2AAF0071692A /* gameOverBG.png in Resources */ = {isa = PBXBuildFile; fileRef = BED43B8D1F5A2AAF0071692A /* gameOverBG.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		BE6682791F54EF970035C6C9 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		BE66827A1F54EF970035C6C9 /* wrong.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.caf; sourceTree = "<group>"; };
 		BE6682941F54EFD30035C6C9 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BED43B851F5A1A670071692A /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		BED43B871F5A1B3E0071692A /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		BED43B8B1F5A2A230071692A /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
+		BED43B8D1F5A2AAF0071692A /* gameOverBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOverBG.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,8 @@
 		BE6682641F54EF970035C6C9 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				BED43B8D1F5A2AAF0071692A /* gameOverBG.png */,
+				BED43B8B1F5A2A230071692A /* gameover.caf */,
 				BE6682651F54EF970035C6C9 /* explosion.caf */,
 				BE6682661F54EF970035C6C9 /* launch.caf */,
 				BE6682671F54EF970035C6C9 /* sliceBackground.png */,
@@ -158,6 +168,8 @@
 			children = (
 				BE66824E1F54E94E0035C6C9 /* GameScene.sks */,
 				BE6682521F54E94E0035C6C9 /* GameScene.swift */,
+				BED43B851F5A1A670071692A /* GameOverScene.sks */,
+				BED43B871F5A1B3E0071692A /* GameOverScene.swift */,
 				BE6682541F54E94E0035C6C9 /* GameViewController.swift */,
 			);
 			name = Game;
@@ -232,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6682581F54E94E0035C6C9 /* Main.storyboard in Resources */,
+				BED43B8E1F5A2AAF0071692A /* gameOverBG.png in Resources */,
 				BE6682841F54EF970035C6C9 /* sliceHitEnemy.sks in Resources */,
 				BE66827C1F54EF970035C6C9 /* launch.caf in Resources */,
 				BE66824F1F54E94E0035C6C9 /* GameScene.sks in Resources */,
@@ -247,6 +260,7 @@
 				BE6682831F54EF970035C6C9 /* sliceHitBomb.sks in Resources */,
 				BE66828E1F54EF970035C6C9 /* watermelon@2x.png in Resources */,
 				BE66828C1F54EF970035C6C9 /* swoosh3.caf in Resources */,
+				BED43B861F5A1A670071692A /* GameOverScene.sks in Resources */,
 				BE66828A1F54EF970035C6C9 /* swoosh1.caf in Resources */,
 				BE6682881F54EF970035C6C9 /* sliceLifeGone@2x.png in Resources */,
 				BE66825A1F54E94E0035C6C9 /* Assets.xcassets in Resources */,
@@ -256,6 +270,7 @@
 				BE66828B1F54EF970035C6C9 /* swoosh2.caf in Resources */,
 				BE6682861F54EF970035C6C9 /* sliceLife@2x.png in Resources */,
 				BE6682811F54EF970035C6C9 /* sliceBombFuse.caf in Resources */,
+				BED43B8C1F5A2A230071692A /* gameover.caf in Resources */,
 				BE6682821F54EF970035C6C9 /* sliceFuse.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED43B881F5A1B3E0071692A /* GameOverScene.swift in Sources */,
 				BE6682531F54E94E0035C6C9 /* GameScene.swift in Sources */,
 				BE6682551F54E94E0035C6C9 /* GameViewController.swift in Sources */,
 				BE66824D1F54E94E0035C6C9 /* AppDelegate.swift in Sources */,
@@ -436,6 +452,7 @@
 				BE6682631F54E94E0035C6C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
